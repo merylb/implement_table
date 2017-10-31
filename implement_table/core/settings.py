@@ -61,7 +61,7 @@ ROOT_URLCONF = 'implement_table.core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(PARENT_DIR, 'implement_front', 'ft-table', 'dist')]
+        'DIRS': [os.path.join(PARENT_DIR, 'implement_front' )]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -126,6 +126,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/dist/'
-STATIC_ROOT = os.path.join(PARENT_DIR,  'implement_front', 'ft-table', 'dist')
-
+STATIC_ROOT = os.path.join(PARENT_DIR, 'implement_front', 'ft-table', 'dist')
 LANGUAGE_CODE = 'fr'

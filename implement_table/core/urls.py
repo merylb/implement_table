@@ -13,19 +13,23 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+from django.conf import settings
 from django.conf.urls import url, include
-from django.views.generic.base import TemplateView
+from django.conf.urls.static import static
+from django.views.generic.base import TemplateView, RedirectView
 
 from implement_table.invoicing.views import InvoiceViewSet, FeesNoteViewSet
 from implement_table.payment.views import PaymentViewSet
 from implement_table.pec.views import CareRequestViewSet
-from implement_table.table.views import   TableConfigViewSet
+from implement_table.table.views import TableConfigViewSet
 
 urlpatterns = [
-    url(r'^implement-table/.*$', TemplateView.as_view(template_name='index.html'), name='index'),
-    url(r'^api/payment', include(PaymentViewSet.urls())),
-    url(r'^api/invoice', include(InvoiceViewSet.urls())),
-    url(r'^api/fees-note', include(FeesNoteViewSet.urls())),
-    url(r'^api/pec', include(CareRequestViewSet.urls())),
-    url(r'^api/table-config', include(TableConfigViewSet.urls())),
- ]
+                  url(r'^implement-table/.*$', TemplateView.as_view(template_name='index.html'), name='index'),
+                  url(r'^$', RedirectView.as_view(url='implement-table/', permanent=False), name='redirect_to_index'),
+
+                  url(r'^api/payment', include(PaymentViewSet.urls())),
+                  url(r'^api/invoice', include(InvoiceViewSet.urls())),
+                  url(r'^api/fees-note', include(FeesNoteViewSet.urls())),
+                  url(r'^api/pec', include(CareRequestViewSet.urls())),
+                  url(r'^api/table-config', include(TableConfigViewSet.urls())),
+              ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
