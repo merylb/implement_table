@@ -1,0 +1,8 @@
+django>=1.11
+pymongo>=3.2
+mongoengine>=0.13
+djangorestframework>=3.6.0
+django-rest-framework-mongoengine>=3.3.0
+num2words
+pydash
+ujson>=1.35

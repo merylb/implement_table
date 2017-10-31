@@ -1,0 +1,31 @@
+[
+  {
+    "key": "date_format",
+    "value": {
+      "py": "%d/%m/%Y",
+      "js": "DD/MM/YYYY"
+    }
+  },
+  {
+    "key": "time_format",
+    "value": {
+      "py": "%H:%M",
+      "js": "HH:mm"
+    }
+  },
+  {
+    "key": "datetime_format",
+    "value": {
+      "py": "%d/%m/%Y %H:%M",
+      "js": "DD/MM/YYYY hh:mm"
+    }
+  },
+  {
+    "key": "lang",
+    "value": "fr"
+  },
+  {
+    "key": "default_values",
+    "value": {}
+  }
+]
