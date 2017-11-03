@@ -115,11 +115,7 @@ class BEmbeddedListField(BSerializerField):
         if obj is None:
             return []
         else:
-            if self.sorted_by:
-                _d = sorted(obj, key=attrgetter('order'))
-                return self.get_serializer(_d, many=True).data
-            else:
-                return self.get_serializer(obj, many=True).data
+            return self.get_serializer(obj, many=True).data
 
     def to_internal_value(self, data):
         _d = []

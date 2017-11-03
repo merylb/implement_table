@@ -45,7 +45,13 @@ def insert_tables_config(name, path=json_path):
 
         table.filtered_by_owner = data.get('filtered_by_owner', False)
 
-    table_config = TableConfig.get_by_key(name, create=True)
-    table_config.value = table
+    table_config = TableConfig.get_by_key(name)
+
+
+    if table_config is None:
+        table_config = TableConfig(key="Visit", value=table)
+    else:
+        table_config.value = table
+
 
     table_config.save()

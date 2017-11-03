@@ -35,7 +35,6 @@ def amount_to_text(total):
     c_fraction_name = default_currency.fraction_name if default_currency is not None else ''
 
     nums = ("%.2f" % total).split('.')
-    print('test----------', nums[0])
     whole = num2words(int(nums[0]), lang=settings.LANGUAGE_CODE) + ' ' + c_full_name + '(s)'
     if len(nums) == 2 and int(nums[1]) > 0:
         fraction = num2words(int(nums[1]), lang=settings.LANGUAGE_CODE)

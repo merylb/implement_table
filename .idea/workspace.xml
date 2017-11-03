@@ -2,8 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37b86ef4-1f02-49ac-bc91-84778896ebe9" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/authentication/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/authentication/apps.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/authentication/classes.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/authentication/events.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/authentication/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/authentication/serializer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/authentication/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/shared/contact/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/shared/contact/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/shared/contact/serializer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/shared/lists/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/shared/lists/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/shared/lists/serializer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/shared/locations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/shared/locations/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/shared/locations/serializer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/shared/staff/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/shared/staff/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/shared/staff/serializer.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/implement_front/ft-table" afterPath="$PROJECT_DIR$/implement_front/ft-table" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/implement_table/core/classes.py" afterPath="$PROJECT_DIR$/implement_table/core/classes.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/implement_table/core/fields.py" afterPath="$PROJECT_DIR$/implement_table/core/fields.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/implement_table/core/utils.py" afterPath="$PROJECT_DIR$/implement_table/core/utils.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/implement_table/db.sqlite3" afterPath="$PROJECT_DIR$/implement_table/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/implement_table/shared/utils.py" afterPath="$PROJECT_DIR$/implement_table/shared/utils.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/implement_table/system/db_management.py" afterPath="$PROJECT_DIR$/implement_table/system/db_management.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/implement_table/system/management/commands/billing_config.py" afterPath="$PROJECT_DIR$/implement_table/system/management/commands/billing_config.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/implement_table/system/management/commands/table_config.py" afterPath="$PROJECT_DIR$/implement_table/system/management/commands/table_config.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/implement_table/table/serializer.py" afterPath="$PROJECT_DIR$/implement_table/table/serializer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/implement_table/ws/websocket.py" afterPath="$PROJECT_DIR$/implement_table/ws/websocket.py" />
     </list>
     <list id="d35b786d-1e57-4c76-805c-e0c5c38aaf3c" name="Failed commit: Default" comment="first" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,75 +48,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/implement_front/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/app/app.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="28" column="25" lean-forward="false" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#56#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fr.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/implement_front/ft-table/dist/assets/i18n/fr.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ft-cdk-table.service.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ft-cdk-table.service.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/app/ft-cdk-table/ft-cdk-table.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="115" column="0" lean-forward="true" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-                <element signature="e#206#3291#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="null/local/invoice" pinned="false" current-in-tab="false">
-        <entry file="mongo://null/local/invoice">
-          <provider selected="true" editor-type-id="MongoData">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ft-cdk-table.component.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/app/ft-cdk-table/ft-cdk-table.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="104" column="30" lean-forward="true" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="30" />
-              <folding>
-                <element signature="n#!!block;n#initPaginationLabel#0;n#FtCdkTableComponent#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/implement_table/core/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="17" column="42" lean-forward="false" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+            <state relative-caret-position="252">
+              <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="115" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -96,31 +61,105 @@
       <file leaf-file-name=".angular-cli.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/implement_front/ft-table/.angular-cli.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            <state relative-caret-position="273">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ft-cdk-table.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/app/ft-cdk-table/ft-cdk-table.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="38" column="58" lean-forward="false" selection-start-line="38" selection-start-column="58" selection-end-line="38" selection-end-column="58" />
+              <folding>
+                <element signature="n#!!block;n#initPaginationLabel#0;n#FtCdkTableComponent#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.bundle.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/implement_front/ft-table/dist/styles.bundle.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1509708572855" expanded="true" signature="24:57774" ph="{...}" />
+                <marker date="1509708572855" expanded="true" signature="57688:57770" ph="{...}" />
+                <marker date="1509708572855" expanded="true" signature="57763:57768" ph="/*...*/" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ft-cdk-table.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/app/ft-cdk-table/ft-cdk-table.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+              <folding>
+                <element signature="n#mat-toolbar#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#cdk-table#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#mat-paginator#0;n#div#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pagi</find>
-      <find>MatButtonModule</find>
-      <find>example</find>
-      <find>getData</find>
       <find>template</find>
       <find>index</find>
       <find>&lt;</find>
       <find>icon</find>
       <find>'django.contrib.staticfiles',</find>
       <find>subsc</find>
+      <find>materia</find>
+      <find>BehaviorSubject</find>
+      <find>:</find>
+      <find>nex</find>
+      <find>user</find>
+      <find>MnDocument</find>
+      <find>authentication</find>
+      <find>MnReferenceField</find>
+      <find>gevent</find>
+      <find>test----------</find>
+      <find>wsHandler</find>
+      <find>readyState</find>
+      <find>receiveMessage</find>
+      <find>connection</find>
+      <find>WsMessage</find>
+      <find>download</find>
+      <find>wsConnection</find>
+      <find>order</find>
+      <find>invoi</find>
+      <find>sorted</find>
+      <find>this.columns</find>
+      <find>regul</find>
+      <find>MatIcon</find>
+      <find>check</find>
     </findStrings>
     <replaceStrings>
       <replace>table</replace>
+      <replace>:</replace>
+      <replace>BDocument</replace>
+      <replace>=</replace>
+      <replace>BReferenceField</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>C:\Users\Hp\Documents\implement_table\implement_table</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -129,24 +168,56 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/implement_front/ft-table/package.json" />
-        <option value="$PROJECT_DIR$/implement_front/ft-table/src/app/app.component.ts" />
-        <option value="$PROJECT_DIR$/implement_front/ft-table/src/app/material-modules.ts" />
-        <option value="$PROJECT_DIR$/implement_front/ft-table/src/index.html" />
-        <option value="$PROJECT_DIR$/implement_front/ft-table/src/styles.scss" />
         <option value="$PROJECT_DIR$/implement_front/ft-table/src/app/app.component.html" />
-        <option value="$PROJECT_DIR$/implement_front/ft-table/src/assets/i18n/fr.json" />
-        <option value="$PROJECT_DIR$/implement_front/ft-table/src/app/ft-cdk-table/ft-cdk-table.component.scss" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/implement_front/ft-table/src/app/ft-cdk-table/ft-cdk-table.component.html" />
         <option value="$PROJECT_DIR$/implement_table/core/urls.py" />
         <option value="$PROJECT_DIR$/implement_front/dist/index.html" />
         <option value="$PROJECT_DIR$/implement_front/ft-table/dist/index.html" />
-        <option value="$PROJECT_DIR$/implement_table/core/settings.py" />
+        <option value="$PROJECT_DIR$/implement_table/authentication/apps.py" />
+        <option value="$PROJECT_DIR$/implement_table/authentication/events.py" />
+        <option value="$PROJECT_DIR$/implement_table/authentication/models.py" />
+        <option value="$PROJECT_DIR$/implement_table/authentication/serializer.py" />
+        <option value="$PROJECT_DIR$/implement_table/shared/lists/models.py" />
+        <option value="$PROJECT_DIR$/implement_table/core/utils.py" />
+        <option value="$PROJECT_DIR$/implement_table/shared/staff/models.py" />
+        <option value="$PROJECT_DIR$/implement_table/shared/locations/models.py" />
+        <option value="$PROJECT_DIR$/implement_table/authentication/views.py" />
+        <option value="$PROJECT_DIR$/implement_table/shared/lists/serializer.py" />
+        <option value="$PROJECT_DIR$/implement_table/shared/locations/serializer.py" />
+        <option value="$PROJECT_DIR$/implement_table/shared/staff/serializer.py" />
+        <option value="$PROJECT_DIR$/implement_table/shared/contact/serializer.py" />
+        <option value="$PROJECT_DIR$/implement_table/shared/utils.py" />
+        <option value="$PROJECT_DIR$/implement_table/core/wsgi.py" />
+        <option value="$PROJECT_DIR$/implement_table/ws/websocket.py" />
+        <option value="$PROJECT_DIR$/implement_front/ft-table/src/app/ws/web-socket-message.ts" />
+        <option value="$PROJECT_DIR$/implement_table/system/management/commands/table_config.py" />
+        <option value="$PROJECT_DIR$/implement_table/system/management/commands/billing_config.py" />
+        <option value="$PROJECT_DIR$/implement_front/ft-table/src/app/ws/web-socket-handler.ts" />
+        <option value="$PROJECT_DIR$/implement_front/ft-table/src/app/ws/web-socket-connection.ts" />
+        <option value="$PROJECT_DIR$/implement_front/ft-table/src/app/ws/web-socket.service.ts" />
+        <option value="$PROJECT_DIR$/App/core/settings.py" />
+        <option value="$PROJECT_DIR$/implement_front/ft-table/src/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/App/core/urls.py" />
+        <option value="$PROJECT_DIR$/manage.py" />
+        <option value="$PROJECT_DIR$/implement_table/invoicing/views.py" />
+        <option value="$PROJECT_DIR$/implement_table/core/mixins.py" />
+        <option value="$PROJECT_DIR$/implement_table/shared/contact/models.py" />
+        <option value="$PROJECT_DIR$/implement_table/core/classes.py" />
+        <option value="$PROJECT_DIR$/implement_table/system/db_management.py" />
+        <option value="$PROJECT_DIR$/implement_table/core/fields.py" />
+        <option value="$PROJECT_DIR$/implement_table/table/serializer.py" />
+        <option value="$PROJECT_DIR$/implement_front/ft-table/src/app/ft-cdk-table/ft-cdk-table.component.scss" />
+        <option value="$PROJECT_DIR$/implement_front/ft-table/src/index.html" />
         <option value="$PROJECT_DIR$/implement_front/index.html" />
+        <option value="$PROJECT_DIR$/implement_table/core/settings.py" />
+        <option value="$PROJECT_DIR$/implement_front/ft-table/src/app/material-modules.ts" />
         <option value="$PROJECT_DIR$/implement_front/ft-table/.angular-cli.json" />
+        <option value="$PROJECT_DIR$/implement_front/ft-table/src/styles.scss" />
         <option value="$PROJECT_DIR$/implement_front/ft-table/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/implement_front/ft-table/src/app/ft-cdk-table/ft-cdk-table.service.ts" />
+        <option value="$PROJECT_DIR$/implement_front/ft-table/src/assets/i18n/fr.json" />
+        <option value="$PROJECT_DIR$/implement_front/ft-table/src/app/ft-cdk-table/ft-cdk-table.component.html" />
         <option value="$PROJECT_DIR$/implement_front/ft-table/src/app/ft-cdk-table/ft-cdk-table.component.ts" />
+        <option value="$PROJECT_DIR$/implement_front/ft-table/src/app/ft-cdk-table/ft-cdk-table.service.ts" />
       </list>
     </option>
   </component>
@@ -160,9 +231,10 @@
     <handled-path value="$PROJECT_DIR$/implement_front/ft-table/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="width" value="1924" />
-    <option name="height" value="1047" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -299,6 +371,62 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="implement_table" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="implement_table" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="implement_front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ft-table" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="i18n" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="implement_table" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="implement_table" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="implement_front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ft-table" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -357,13 +485,13 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.mongoOptions" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../table_front_back/ft-table" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/ng2-translate-aot-test-master/ng2-translate-aot-test-master" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.eslint.eslintPackage" value="" />
@@ -371,7 +499,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Hp\Documents\implement_table\implement_front" />
+      <recent name="C:\Users\Hp\Documents\implement_table\implement_front\ft-table\src\assets" />
+      <recent name="C:\Users\Hp\Documents\implement_table\implement_table\core" />
+      <recent name="C:\Users\Hp\Documents\implement_table\implement_table\shared" />
+      <recent name="C:\Users\Hp\Documents\implement_table\implement_table\shared\contact" />
+      <recent name="C:\Users\Hp\Documents\implement_table\implement_table" />
     </key>
   </component>
   <component name="RunManager">
@@ -626,52 +758,60 @@
       <option name="project" value="LOCAL" />
       <updated>1509471157450</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="first">
+      <created>1509471689972</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1509471689972</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1924" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21668473" sideWeight="0.50214595" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3336887" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26002166" sideWeight="0.49785408" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18176973" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1362661" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29102844" sideWeight="0.49785408" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="92" width="1724" height="856" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="92" y="92" width="1724" height="856" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21668473" sideWeight="0.50214595" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="92" y="92" width="1724" height="856" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3391116" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20619658" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12242687" sideWeight="0.49785408" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19871795" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -690,319 +830,511 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/implement_table/shared/lists/models.py</url>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/implement_front/index.html">
+    <entry file="file://$PROJECT_DIR$/implement_table/authentication/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implement_table/authentication/serializer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="32" column="22" lean-forward="false" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implement_table/core/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="34" column="6" lean-forward="false" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/app/app.component.spec.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/.angular-cli.json">
+    <entry file="file://$PROJECT_DIR$/implement_table/ws/websocket.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="288">
+          <caret line="23" column="28" lean-forward="false" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/app/ft-cdk-table/ft-cdk-table.component.scss">
+    <entry file="file://$PROJECT_DIR$/implement_table/table/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implement_table/invoicing/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implement_table/invoicing/serializer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="44" column="15" lean-forward="false" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/rest_framework/mixins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="68" column="46" lean-forward="false" selection-start-line="68" selection-start-column="46" selection-end-line="68" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/app/ws/web-socket-connection.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="767">
+          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/app/ws/web-socket.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
-          <caret line="379" column="1" lean-forward="true" selection-start-line="379" selection-start-column="1" selection-end-line="379" selection-end-column="15" />
-          <folding>
-            <element signature="e#99#8881#1" expanded="false" />
-            <element signature="e#9380#9879#0" expanded="false" />
-            <element signature="e#9560#9824#0" expanded="false" />
-            <element signature="e#10051#10162#0" expanded="false" />
-            <element signature="e#10183#10241#0" expanded="false" />
-            <element signature="e#10271#10303#0" expanded="false" />
-            <element signature="e#10337#10351#0" expanded="false" />
-            <element signature="e#10372#10445#0" expanded="false" />
-            <element signature="e#10459#10511#0" expanded="false" />
-          </folding>
+          <caret line="49" column="0" lean-forward="true" selection-start-line="47" selection-start-column="34" selection-end-line="49" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/app/ft-cdk-table/ft-cdk-table.component.html">
+    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/app/ws/web-socket-message.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-          <folding />
+        <state relative-caret-position="432">
+          <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/app/ws/web-socket-handler.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/core/classes.py" />
+    <entry file="file://$PROJECT_DIR$/App/core/decorators.py" />
+    <entry file="file://$PROJECT_DIR$/App/core/settings.py" />
+    <entry file="file://$PROJECT_DIR$/App/core/urls.py" />
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implement_table/invoicing/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/rest_framework/viewsets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1070">
+          <caret line="149" column="6" lean-forward="false" selection-start-line="149" selection-start-column="6" selection-end-line="149" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implement_table/shared/contact/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="36" lean-forward="true" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implement_table/core/mixins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implement_table/deps/json/invoice-columns.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/index.html">
+    <entry file="file://$PROJECT_DIR$/implement_table/table/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/implement_front/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/dist/index.html" />
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="37" lean-forward="false" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/implement_table/core/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2268">
-          <caret line="127" column="21" lean-forward="true" selection-start-line="127" selection-start-column="21" selection-end-line="127" selection-end-column="21" />
+        <state relative-caret-position="90">
+          <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/implement_table/core/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="24" column="74" lean-forward="false" selection-start-line="24" selection-start-column="69" selection-end-line="24" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/app/ft-cdk-table/ft-cdk-table.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
-          <caret line="327" column="17" lean-forward="true" selection-start-line="327" selection-start-column="17" selection-end-line="327" selection-end-column="17" />
-          <folding>
-            <element signature="e#99#8881#1" expanded="false" />
-            <element signature="e#9380#9879#0" expanded="false" />
-            <element signature="e#9560#9824#0" expanded="false" />
-            <element signature="e#10051#10162#0" expanded="false" />
-            <element signature="e#10183#10241#0" expanded="false" />
-            <element signature="e#10271#10303#0" expanded="false" />
-            <element signature="e#10337#10351#0" expanded="false" />
-            <element signature="e#10372#10445#0" expanded="false" />
-            <element signature="e#10459#10511#0" expanded="false" />
-          </folding>
+          <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/app/ft-cdk-table/ft-cdk-table.component.html">
+    <entry file="file://$PROJECT_DIR$/implement_table/system/db_management.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="751">
+          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implement_table/system/management/commands/table_config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="25" column="39" lean-forward="false" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implement_table/core/fields.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="118" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implement_table/table/serializer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implement_table/core/classes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="377" column="0" lean-forward="false" selection-start-line="377" selection-start-column="0" selection-end-line="377" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implement_table/system/management/commands/billing_config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
-          <caret line="19" column="75" lean-forward="false" selection-start-line="19" selection-start-column="75" selection-end-line="19" selection-end-column="93" />
-          <folding />
+          <caret line="21" column="15" lean-forward="true" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/index.html">
+    <entry file="file://$PROJECT_DIR$/implement_table/authentication/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="72">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/implement_front/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/app/ft-cdk-table/ft-cdk-table.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2016">
-          <caret line="112" column="15" lean-forward="false" selection-start-line="112" selection-start-column="15" selection-end-line="112" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#206#3291#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/app/ft-cdk-table/ft-cdk-table.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1728">
-          <caret line="96" column="15" lean-forward="false" selection-start-line="96" selection-start-column="15" selection-end-line="96" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#59#0" expanded="false" />
-            <element signature="n#!!block;n#initPaginationLabel#0;n#FtCdkTableComponent#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/dist/index.html" />
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/app/ft-cdk-table/ft-cdk-table.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="322" column="33" lean-forward="false" selection-start-line="322" selection-start-column="33" selection-end-line="322" selection-end-column="33" />
-          <folding>
-            <element signature="e#99#8881#1" expanded="false" />
-            <element signature="e#9380#9879#0" expanded="false" />
-            <element signature="e#9560#9824#0" expanded="false" />
-            <element signature="e#10051#10162#0" expanded="false" />
-            <element signature="e#10183#10241#0" expanded="false" />
-            <element signature="e#10271#10303#0" expanded="false" />
-            <element signature="e#10337#10351#0" expanded="false" />
-            <element signature="e#10372#10445#0" expanded="false" />
-            <element signature="e#10459#10511#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/main.ts">
+    <entry file="file://$PROJECT_DIR$/implement_table/deps/json/billing-config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/dist/main.cfe27dfe9105e43a239c.bundle.js" />
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/dist/scripts.bundle.js" />
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/dist/inline.bundle.js" />
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/dist/styles.9d01c15d966a7d4362ae.bundle.css" />
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/app/material-modules.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="54" column="25" lean-forward="true" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/styles.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="48" lean-forward="false" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/assets/i18n/fr.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/dist/vendor.bundle.js" />
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/dist/polyfills.bundle.js.map" />
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/dist/styles.bundle.js" />
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/app/ft-cdk-table/ft-cdk-table.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/app/ft-cdk-table/ft-cdk-table.component.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="379" column="1" lean-forward="false" selection-start-line="379" selection-start-column="1" selection-end-line="379" selection-end-column="15" />
+        <state relative-caret-position="6588">
+          <caret line="366" column="1" lean-forward="true" selection-start-line="366" selection-start-column="1" selection-end-line="366" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/dist/main.bundle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3402">
+          <caret line="190" column="0" lean-forward="true" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
           <folding>
-            <element signature="e#99#8881#1" expanded="false" />
-            <element signature="e#9380#9879#0" expanded="false" />
-            <element signature="e#9560#9824#0" expanded="false" />
-            <element signature="e#10051#10162#0" expanded="false" />
-            <element signature="e#10183#10241#0" expanded="false" />
-            <element signature="e#10271#10303#0" expanded="false" />
-            <element signature="e#10337#10351#0" expanded="false" />
-            <element signature="e#10372#10445#0" expanded="false" />
-            <element signature="e#10459#10511#0" expanded="false" />
+            <marker date="1509708715189" expanded="true" signature="22:58814" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="4174:5831" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="6446:6590" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="6524:6549" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="6620:6678" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="6706:8013" ph="[...]" />
+            <marker date="1509708715189" expanded="true" signature="6767:6781" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="6784:8010" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="6808:7011" ph="[...]" />
+            <marker date="1509708715189" expanded="true" signature="6871:6889" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="6975:7000" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="7030:7810" ph="[...]" />
+            <marker date="1509708715189" expanded="true" signature="7104:7123" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="7190:7210" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="7280:7302" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="7365:7381" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="7450:7471" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="7481:7799" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="7507:7785" ph="{&quot;useFactory&quot;: HttpLoaderFactory...}" />
+            <marker date="1509708715189" expanded="true" signature="7592:7613" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="7749:7765" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="7889:7911" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="7984:8002" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="8068:8073" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="8152:8157" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="8185:11358" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="11351:11356" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="11435:11440" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="11489:13358" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="13268:13305" ph="/** EXPORTS FROM exports-loader ...*/" />
+            <marker date="1509708715189" expanded="true" signature="13351:13356" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="13433:13438" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="13499:26591" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="13516:13546" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="13684:13727" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="15916:15936" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="16136:16567" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="16386:16564" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="16659:17142" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="17206:17319" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="17473:21254" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="17527:17719" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="17777:18307" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="18371:18900" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="18961:19251" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="19318:19741" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="19415:19713" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="19811:21154" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="19821:21148" ph="//..." />
+            <marker date="1509708715189" expanded="true" signature="21270:21657" ph="[...]" />
+            <marker date="1509708715189" expanded="true" signature="21333:21348" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="21403:21416" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="21522:21535" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="21608:21621" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="21718:22120" ph="[...]" />
+            <marker date="1509708715189" expanded="true" signature="21781:21796" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="21851:21869" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="21975:21993" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="22066:22084" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="22208:22922" ph="[...]" />
+            <marker date="1509708715189" expanded="true" signature="22269:22284" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="22287:22646" ph="{&quot;selector&quot;: 'app-ft-cdk-table'...}" />
+            <marker date="1509708715189" expanded="true" signature="22403:22426" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="22762:22785" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="22862:22885" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="22947:23031" ph="/** An example database that the data source uses to retrieve data for the table. ...*/" />
+            <marker date="1509708715189" expanded="true" signature="23067:23768" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="23117:23534" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="23253:23314" ph="/** Stream that emits whenever the data has been modified. ...*/" />
+            <marker date="1509708715189" expanded="true" signature="23596:23736" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="23623:23676" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="23774:24182" ph="/** Data source to provide what data should be rendered in the table. Note that the data source ...*/" />
+            <marker date="1509708715189" expanded="true" signature="24224:26434" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="24342:24572" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="24577:24674" ph="/** Connect function called by the table to retrieve one stream containing the data to render. ...*/" />
+            <marker date="1509708715189" expanded="true" signature="24727:25444" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="24788:24991" ph="[...]" />
+            <marker date="1509708715189" expanded="true" signature="25177:25436" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="25568:26403" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="25791:26395" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="26494:26510" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="26584:26589" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="26664:26669" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="26730:32300" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="26747:26777" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="27129:27149" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="27368:27851" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="27915:28028" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="28070:31624" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="28120:28189" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="28247:31482" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="28257:28374" ph="//..." />
+            <marker date="1509708715189" expanded="true" signature="28390:31475" ph="[...]" />
+            <marker date="1509708715189" expanded="true" signature="28404:29140" ph="{&quot;name&quot;: &quot;number&quot;...}" />
+            <marker date="1509708715189" expanded="true" signature="28811:28955" ph="[...]" />
+            <marker date="1509708715189" expanded="true" signature="28833:28937" ph="{&quot;name&quot;: &quot;default&quot;...}" />
+            <marker date="1509708715189" expanded="true" signature="28985:29126" ph="[...]" />
+            <marker date="1509708715189" expanded="true" signature="29007:29108" ph="{&quot;name&quot;: &quot;default&quot;...}" />
+            <marker date="1509708715189" expanded="true" signature="29154:29892" ph="{&quot;name&quot;: &quot;doc_date&quot;...}" />
+            <marker date="1509708715189" expanded="true" signature="29563:29707" ph="[...]" />
+            <marker date="1509708715189" expanded="true" signature="29585:29689" ph="{&quot;name&quot;: &quot;default&quot;...}" />
+            <marker date="1509708715189" expanded="true" signature="29737:29878" ph="[...]" />
+            <marker date="1509708715189" expanded="true" signature="29759:29860" ph="{&quot;name&quot;: &quot;default&quot;...}" />
+            <marker date="1509708715189" expanded="true" signature="29906:30668" ph="{&quot;name&quot;: &quot;beneficiary_name&quot;...}" />
+            <marker date="1509708715189" expanded="true" signature="30339:30483" ph="[...]" />
+            <marker date="1509708715189" expanded="true" signature="30361:30465" ph="{&quot;name&quot;: &quot;default&quot;...}" />
+            <marker date="1509708715189" expanded="true" signature="30513:30654" ph="[...]" />
+            <marker date="1509708715189" expanded="true" signature="30535:30636" ph="{&quot;name&quot;: &quot;default&quot;...}" />
+            <marker date="1509708715189" expanded="true" signature="30682:31465" ph="{&quot;name&quot;: &quot;taxed_amount&quot;...}" />
+            <marker date="1509708715189" expanded="true" signature="31103:31247" ph="[...]" />
+            <marker date="1509708715189" expanded="true" signature="31125:31229" ph="{&quot;name&quot;: &quot;default&quot;...}" />
+            <marker date="1509708715189" expanded="true" signature="31277:31418" ph="[...]" />
+            <marker date="1509708715189" expanded="true" signature="31299:31400" ph="{&quot;name&quot;: &quot;default&quot;...}" />
+            <marker date="1509708715189" expanded="true" signature="31538:31591" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="31660:32208" ph="[...]" />
+            <marker date="1509708715189" expanded="true" signature="31721:31737" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="31848:31858" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="31927:31937" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="32049:32071" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="32149:32171" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="32293:32298" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="32356:32361" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="38418:38536" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="32439:32469" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="33272:33292" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="33497:33980" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="34022:34090" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="38418:38463" ph="[...]" />
+            <marker date="1509708715189" expanded="true" signature="34184:34198" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="38418:38460" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="38418:38454" ph="[...]" />
+            <marker date="1509708715189" expanded="true" signature="34305:34334" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="34482:34499" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="34563:34588" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="34656:34676" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="34743:34770" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="34837:34858" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="34925:34952" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="35019:35038" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="35105:35128" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="35195:35215" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="35282:35304" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="35371:35396" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="35463:35484" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="35551:35575" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="35642:35665" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="35732:35751" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="35818:35838" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="35991:36010" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="36077:36102" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="36169:36193" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="36260:36286" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="36353:36383" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="36450:36470" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="36625:36646" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="36713:36735" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="36802:36823" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="36890:36916" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="36983:37006" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="37073:37092" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="37159:37179" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="37246:37265" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="38420:38442" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="38529:38534" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="38600:38605" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="38666:45034" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="38683:38713" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="39199:39219" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="39416:39899" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="39963:40076" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="40114:44797" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="40151:40895" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="40505:40687" ph="{&quot;p2&quot;: location.hostname...}" />
+            <marker date="1509708715189" expanded="true" signature="40945:41134" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="41182:41602" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="41355:41471" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="41485:41596" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="41655:41982" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="41758:41898" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="41912:41976" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="42046:42394" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="42273:42326" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="42340:42388" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="42449:43035" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="42529:42704" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="42780:43008" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="42801:42997" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="43091:43341" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="43129:43335" ph="//..." />
+            <marker date="1509708715189" expanded="true" signature="43406:43795" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="43431:43561" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="43575:43766" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="43847:43900" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="43958:44263" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="44036:44051" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="44107:44129" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="44321:44769" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="44478:44601" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="44634:44740" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="44828:44958" ph="[...]" />
+            <marker date="1509708715189" expanded="true" signature="44889:44905" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="45027:45032" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="45095:45100" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="45161:50195" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="45178:45208" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="45850:45870" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="46068:50134" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="46121:46430" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="46480:46759" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="46490:46633" ph="//..." />
+            <marker date="1509708715189" expanded="true" signature="46816:47095" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="46844:47089" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="47157:47535" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="47209:47529" ph="//..." />
+            <marker date="1509708715189" expanded="true" signature="47541:48337" ph="//..." />
+            <marker date="1509708715189" expanded="true" signature="48399:48826" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="48491:48513" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="48627:48742" ph="//..." />
+            <marker date="1509708715189" expanded="true" signature="48884:49237" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="48964:49208" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="49294:49483" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="49542:49920" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="49630:49891" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="49991:50102" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="50066:50081" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="50188:50193" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="50256:50261" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="50322:52608" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="50460:50490" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="50691:50711" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="50876:51269" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="51349:52547" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="51387:51646" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="51693:51888" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="51950:52522" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="52387:52465" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="52601:52606" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="52669:52674" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="52735:56607" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="52752:52782" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="53701:53721" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="53943:54426" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="54490:54603" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="54646:56371" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="54680:55036" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="54829:55029" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="55089:55154" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="55209:55274" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="55330:55396" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="55458:55628" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="55774:56139" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="55960:55978" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="56078:56100" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="56406:56530" ph="[...]" />
+            <marker date="1509708715189" expanded="true" signature="56467:56483" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="56600:56605" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="56667:56672" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="56733:57377" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="56750:56780" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="56866:57283" ph="//..." />
+            <marker date="1509708715189" expanded="true" signature="57302:57327" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="57370:57375" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="57417:57422" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="57483:58663" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="58029:58049" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="58251:58268" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="58345:58365" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="58448:58476" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="58547:58562" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="58656:58661" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="58676:58681" ph="/*...*/" />
+            <marker date="1509708715189" expanded="true" signature="58730:58810" ph="{...}" />
+            <marker date="1509708715189" expanded="true" signature="58803:58808" ph="/*...*/" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/dist/polyfills.bundle.js" />
-    <entry file="file://$PROJECT_DIR$/implement_table/core/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/implement_table/core/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-172">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/implement_front/dist/index.html" />
-    <entry file="file://$PROJECT_DIR$/implement_table/core/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="66" column="20" lean-forward="true" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/dist/main.bundle.js" />
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/dist/index.html" />
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/.angular-cli.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/implement_front/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1014,42 +1346,135 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/implement_table/core/urls.py">
+    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="17" column="42" lean-forward="false" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+        <state relative-caret-position="414">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implement_table/core/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="127" column="21" lean-forward="true" selection-start-line="127" selection-start-column="21" selection-end-line="127" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implement_front/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="71" lean-forward="false" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/dist/styles.bundle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1509708572855" expanded="true" signature="24:57774" ph="{...}" />
+            <marker date="1509708572855" expanded="true" signature="57688:57770" ph="{...}" />
+            <marker date="1509708572855" expanded="true" signature="57763:57768" ph="/*...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/assets/mdi.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="0" column="3226" lean-forward="false" selection-start-line="0" selection-start-column="3226" selection-end-line="0" selection-end-column="3226" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/app/material-modules.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-288">
+          <caret line="17" column="18" lean-forward="true" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="28" column="25" lean-forward="false" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+        <state relative-caret-position="291">
+          <caret line="46" column="88" lean-forward="false" selection-start-line="46" selection-start-column="88" selection-end-line="46" selection-end-column="88" />
           <folding>
             <element signature="e#0#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/app/ft-cdk-table/ft-cdk-table.service.ts">
+    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/.angular-cli.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="115" column="0" lean-forward="true" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+        <state relative-caret-position="273">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/assets/i18n/fr.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/tslint.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/app/ft-cdk-table/ft-cdk-table.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#206#3291#0" expanded="false" />
+            <element signature="n#mat-toolbar#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#cdk-table#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#mat-paginator#0;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/app/ft-cdk-table/ft-cdk-table.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="104" column="30" lean-forward="true" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="30" />
+        <state relative-caret-position="378">
+          <caret line="38" column="58" lean-forward="false" selection-start-line="38" selection-start-column="58" selection-end-line="38" selection-end-column="58" />
           <folding>
             <element signature="n#!!block;n#initPaginationLabel#0;n#FtCdkTableComponent#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implement_front/ft-table/src/app/ft-cdk-table/ft-cdk-table.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="115" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>

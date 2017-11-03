@@ -1,3 +1,4 @@
+import re
 from random import randint
 
 import time
@@ -36,3 +37,27 @@ def generate_id(key_len=16):
         key_len -= 1
 
     return "{}.{}".format(str(round(time.time() * 100000)), key)
+
+
+class FullName:
+    @property
+    def full_name(self):
+        name = ' '.join([getattr(self.title, 'value', ''), self.last_name, self.first_name])
+        return re.sub('^ ', '', name)
+
+    def dcm_full_name(self):
+        return "^".join([self.last_name, self.first_name])
+
+
+class ModuleModel:
+    @property
+    def _model(self):
+        return self.__class__.__name__
+
+    @property
+    def track_by(self):
+        return '{}-{}'.format(self.__class__.__name__, self.id)
+
+    @property
+    def _module(self):
+        return self.__class__.__module__

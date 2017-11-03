@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand
 
-from  system import db_management
+from  implement_table.system import db_management
 
 
 

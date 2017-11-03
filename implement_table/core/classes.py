@@ -267,13 +267,14 @@ class BViewSet(viewsets.ModelViewSet):
             self.pk = int(self.kwargs["pk"])
         except ValueError:
             self.pk = ObjectId(self.kwargs["pk"])
-
         try:
             query = {"_id": self.pk, "is_deleted": {"$ne": True}}
 
             query.update(self.permission_filter())
 
             query = self.hidden_model_filter(query)
+
+            print('test--------', query)
 
             return self.get_model().objects.get(__raw__=query)
 
@@ -288,17 +289,65 @@ class BViewSet(viewsets.ModelViewSet):
         query = self.hidden_model_filter(query, many=True)
         return self.get_model().objects(__raw__=query).order_by(*self.order_by)
 
+
+
     def hidden_model_filter(self, query=None, many=False):
-        return {}
+        user = self.request.user
+
+        # from App.visit.models import Visit
+        from implement_table.core.mixins import MnHiddenModelMixin, MnHiddenVisitMixin
+        # from App.patient.mixins import SummaryFileMixin
+
+        # if not user.is_special and not user.profile.is_root:
+        #     if MnHiddenModelMixin in self.get_model().__bases__:
+        #         query.update({"is_hidden": {"$ne": True}})
+        #
+        #     if MnHiddenVisitMixin in self.get_model().__bases__:
+        #         if many:
+        #             pass
+        #         else:
+        #             obj = self.get_model().objects.get(__raw__={"_id": self.pk})
+        #             if obj.visit.is_hidden:
+        #                 raise self.get_model().DoesNotExist()
+
+        return query
 
     def permission_filter(self):
-        return {}
+        data = []
+        # staff = self.request.staff
+        # access_level = self._access_level()
+
+        # if access_level == "service":
+        #     for key in self.owner_fields:
+        #         items = [item.id for item in self._service_staffs(staff.service)]
+        #         items.append(None)
+        #         d = dict()
+        #         d[key] = {"$in": items}
+        #
+        #         data.append(d)
+        #
+        # if access_level == "mine":
+        #     for key in self.owner_fields:
+        #         d = dict()
+        #         d[key] = {"$in": [staff.id, None]}
+        #
+        #         data.append(d)
+
+        # edit
+        # data.append({"owner": {"$exists": False}})
+
+        return {"$or": data} if len(data) > 0 else {}
+
+
+
 
     def list(self, request, *args, **kwargs):
         serializer = self.get_serializer(self.get_objects(), many=True)
         return Response(serializer.data)
 
     def retrieve(self, request, *args, **kwargs):
+
+        print('test----------------------------')
         return super(BViewSet, self).retrieve(request, *args, **kwargs)
 
     def create(self, request, *args, **kwargs):

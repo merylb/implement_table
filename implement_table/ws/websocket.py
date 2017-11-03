@@ -13,9 +13,12 @@ class MnWebSocket(Subscriber, WebSocket):
     subscribers = set()
 
     def opened(self):
+        print('test--------------------')
+
         MnWebSocket.subscribers.add(self)
 
     def received_message(self, message):
+        print('test-------------bbfghgjn-------', message)
         MnWebSocket.handle(self, message.data)
 
     def closed(self, *args):
@@ -61,7 +64,7 @@ class MnWebSocket(Subscriber, WebSocket):
 
     @classmethod
     def authentication(cls, msg):
-        from App.authentication.models import MnUser
+        from implement_table.authentication.models import MnUser
 
         rep_msg = WsMessage(msg.id, WsMessageType.authentication.value, msg.topic)
         rep_msg.body = ""

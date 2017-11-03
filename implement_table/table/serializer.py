@@ -11,7 +11,7 @@ from implement_table.table.models import TableColumns
 class TableClassesSerializer(EmbeddedDocumentSerializer):
     class Meta:
         model = TableClasses
-        fields = '__all__'
+        fields ="__all__"
 
 
 class AllowPropertyNamespaceSerializer(EmbeddedDocumentSerializer):
@@ -20,7 +20,7 @@ class AllowPropertyNamespaceSerializer(EmbeddedDocumentSerializer):
 
     class Meta:
         model = AllowPropertyNamespace
-        fields = '__all__'
+        fields = "__all__"
 
 
 class ValuePropertyNamespaceSerializer(EmbeddedDocumentSerializer):
@@ -29,7 +29,7 @@ class ValuePropertyNamespaceSerializer(EmbeddedDocumentSerializer):
 
     class Meta:
         model = ValuePropertyNamespace
-        fields = '__all_'
+        fields = "__all__"
 
 
 class TableColumnsSerializer(EmbeddedDocumentSerializer):
@@ -59,7 +59,7 @@ class TableColumnsSerializer(EmbeddedDocumentSerializer):
 
     class Meta:
         model = TableColumns
-        fields = '__all__'
+        fields ="__all__"
 
 
 class TableSerializer(EmbeddedDocumentSerializer):
@@ -69,7 +69,7 @@ class TableSerializer(EmbeddedDocumentSerializer):
 
     class Meta:
         model = Table
-        fields = '__all__'
+        fields = ('columns', 'classes', 'filtered_by_owner')
 
 
 class TableConfigSerializer(DocumentSerializer):
