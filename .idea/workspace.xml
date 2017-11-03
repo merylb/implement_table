@@ -2,37 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37b86ef4-1f02-49ac-bc91-84778896ebe9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/authentication/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/authentication/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/authentication/classes.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/authentication/events.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/authentication/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/authentication/serializer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/authentication/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/shared/contact/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/shared/contact/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/shared/contact/serializer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/shared/lists/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/shared/lists/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/shared/lists/serializer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/shared/locations/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/shared/locations/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/shared/locations/serializer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/shared/staff/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/shared/staff/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/implement_table/shared/staff/serializer.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/implement_front/ft-table" afterPath="$PROJECT_DIR$/implement_front/ft-table" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/implement_table/core/classes.py" afterPath="$PROJECT_DIR$/implement_table/core/classes.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/implement_table/core/fields.py" afterPath="$PROJECT_DIR$/implement_table/core/fields.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/implement_table/core/utils.py" afterPath="$PROJECT_DIR$/implement_table/core/utils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/implement_table/db.sqlite3" afterPath="$PROJECT_DIR$/implement_table/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/implement_table/shared/utils.py" afterPath="$PROJECT_DIR$/implement_table/shared/utils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/implement_table/system/db_management.py" afterPath="$PROJECT_DIR$/implement_table/system/db_management.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/implement_table/system/management/commands/billing_config.py" afterPath="$PROJECT_DIR$/implement_table/system/management/commands/billing_config.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/implement_table/system/management/commands/table_config.py" afterPath="$PROJECT_DIR$/implement_table/system/management/commands/table_config.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/implement_table/table/serializer.py" afterPath="$PROJECT_DIR$/implement_table/table/serializer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/implement_table/ws/websocket.py" afterPath="$PROJECT_DIR$/implement_table/ws/websocket.py" />
     </list>
     <list id="d35b786d-1e57-4c76-805c-e0c5c38aaf3c" name="Failed commit: Default" comment="first" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -490,7 +461,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.mongoOptions" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/ng2-translate-aot-test-master/ng2-translate-aot-test-master" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -765,7 +736,14 @@
       <option name="project" value="LOCAL" />
       <updated>1509471689972</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="first">
+      <created>1509710382674</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1509710382674</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1010,6 +988,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="524">
           <caret line="118" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1024,6 +1003,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
           <caret line="377" column="0" lean-forward="false" selection-start-line="377" selection-start-column="0" selection-end-line="377" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#14#0" expanded="false" />
+            <element signature="e#810#3102#0" expanded="false" />
+            <element signature="e#3203#7248#0" expanded="false" />
+            <element signature="e#7302#8319#0" expanded="false" />
+            <element signature="e#8365#12683#0" expanded="false" />
+            <element signature="e#9510#9735#0" expanded="false" />
+            <element signature="e#12719#13993#0" expanded="false" />
+            <element signature="e#14026#15957#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
