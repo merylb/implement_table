@@ -1,6 +1,32 @@
+from pydash import py_
+from rest_framework.response import Response
+
 from implement_table.core.classes import BViewSet
-from implement_table.table.serializer import TableConfigSerializer
+
+from implement_table.table.mixins import MnTableMixin
+
+from . import serializer
 
 
-class TableConfigViewSet(BViewSet):
-    serializer_class = TableConfigSerializer
+class TableConfigViewSet(BViewSet, MnTableMixin):
+    serializer_class = serializer.TableConfigSerializer
+
+    _model_serializer = None
+    _model = None
+
+    def create(self, request, *args, **kwargs):
+        model = request.data.pop('model', "")
+        serializer = request.data.pop('serializer', "")
+        configKey = request.data.pop('configKey', "")
+        pkg = request.data.pop('packaging', "")
+        _query = py_(request.data.pop('query', [])).reject(
+            lambda item: item.get('value', '').isspace() or item.get('value') is None).value()
+
+        serializer_pkg = __import__(pkg + '.serializer', fromlist=serializer + 'Serializer')
+        model_pkg = __import__(pkg + '.models', fromlist=model)
+        model_class = getattr(model_pkg, model)
+        serializer_class = getattr(serializer_pkg, serializer + 'Serializer')
+        self._model = model_class
+        self._model_serializer = serializer_class
+
+        return Response(self.request_list(_query))

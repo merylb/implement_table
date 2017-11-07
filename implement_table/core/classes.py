@@ -346,13 +346,11 @@ class BViewSet(viewsets.ModelViewSet):
         return Response(serializer.data)
 
     def retrieve(self, request, *args, **kwargs):
-
-        print('test----------------------------')
         return super(BViewSet, self).retrieve(request, *args, **kwargs)
 
     def create(self, request, *args, **kwargs):
-        if request.staff is not None:
-            request.data['owner'] = {"id": request.staff.id}
+        # if request.staff is not None:
+        #     request.data['owner'] = {"id": request.staff.id}
 
         return super(BViewSet, self).create(request, *args, **kwargs)
 

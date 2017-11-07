@@ -52,8 +52,8 @@ class InvoiceLineSerializer(EmbeddedDocumentSerializer):
 
 
 class InvoiceSerializer(InvoicingDocumentSerializer):
-    beneficiary_type = CharField()
-    tariff = TariffSerializer(required=True, allow_null=True)
+    beneficiary_type = CharField(allow_blank=True)
+    tariff = TariffSerializer(required=False, allow_null=True)
     lines = BEmbeddedListField(serializer=InvoiceLineSerializer, allow_null=True, required=False)
 
     class Meta:

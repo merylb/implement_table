@@ -1,17 +1,16 @@
 from implement_table.core.fields import BEmbeddedListField
-from implement_table.table.models import Table, TableConfig, TableClasses, ValuePropertyNamespace, \
-    AllowPropertyNamespace
 
 from rest_framework.fields import CharField, BooleanField, IntegerField
 from rest_framework_mongoengine.serializers import EmbeddedDocumentSerializer, DocumentSerializer
 
-from implement_table.table.models import TableColumns
+from implement_table.table.models import Table, TableConfig, TableClasses, ValuePropertyNamespace, TableColumns, \
+    AllowPropertyNamespace
 
 
 class TableClassesSerializer(EmbeddedDocumentSerializer):
     class Meta:
         model = TableClasses
-        fields ="__all__"
+        fields = "__all__"
 
 
 class AllowPropertyNamespaceSerializer(EmbeddedDocumentSerializer):
@@ -59,7 +58,7 @@ class TableColumnsSerializer(EmbeddedDocumentSerializer):
 
     class Meta:
         model = TableColumns
-        fields ="__all__"
+        fields = "__all__"
 
 
 class TableSerializer(EmbeddedDocumentSerializer):
