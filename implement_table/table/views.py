@@ -19,14 +19,13 @@ class TableConfigViewSet(BViewSet, MnTableMixin):
         serializer = request.data.pop('serializer', "")
         configKey = request.data.pop('configKey', "")
         pkg = request.data.pop('packaging', "")
-        _query = py_(request.data.pop('query', [])).reject(
-            lambda item: item.get('value', '').isspace() or item.get('value') is None).value()
+        _query = request.data.pop('query', [])
 
-        serializer_pkg = __import__(pkg + '.serializer', fromlist=serializer + 'Serializer')
-        model_pkg = __import__(pkg + '.models', fromlist=model)
+        serializer_pkg = __import__("{}{}".format(pkg, '.serializer'), fromlist=serializer + 'Serializer')
+        model_pkg = __import__("{}{}".format(pkg, '.models'), fromlist=model)
         model_class = getattr(model_pkg, model)
         serializer_class = getattr(serializer_pkg, serializer + 'Serializer')
         self._model = model_class
         self._model_serializer = serializer_class
 
-        return Response(self.request_list(_query))
+        return Response(self.request_list(_query, configKey))

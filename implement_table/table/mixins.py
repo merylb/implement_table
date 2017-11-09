@@ -5,12 +5,36 @@ from implement_table.table.models import TableConfig, TableColumns
 
 
 class MnTableMixin:
-    def request_list(self, data):
+    def request_list(self, data, configKey):
         dictionary = {}
         query = {
             "$and": []
         }
         print('testtt----------', data)
+
+
+        if "multi_search" in data and len(data["multi_search"])>0:
+            search_keys = []
+            columns = self._get_columns(configKey)
+
+
+            for col in data["multi_search"]:
+                column = list(filter(lambda x: x.order_by == col['column'], columns))
+                if len(column) > 0:
+                    column = column[0]
+                    if not column.is_ref and self._generate_query(column, col['value']) is not None:
+                        search_keys.append(self._generate_query(column, col['value']))
+                    elif column.is_ref and self._generate_reference_query(column, col['value']) is not None:
+                        search_keys.append(self._generate_reference_query(column, col['value']))
+                else:
+                    search_keys.append({ col['column']: col['value']})
+
+            if search_keys:
+                query["$and"].append({'$and': search_keys})
+
+        # query["$and"] += self._handle_access(kwargs)
+
+        print('tetettete------------', query)
         # if "search_all" in data and data["search_all"] != "":
         #     search_keys = []
         #     columns = list(filter(lambda x: x.is_global_searchable, self._get_columns()))
@@ -77,12 +101,13 @@ class MnTableMixin:
         return TableConfig.get_by_key(config_key, None).value.columns
 
     #
+
     # def _filtered_by_owner(self):
     #     return TableConfig.get_by_key(self.config_key, None).value.filtered_by_owner
     #
     @staticmethod
     def _generate_query(column, search_key, key=None):
-        key = column.order_by if key is None else key
+        key = column.name if key is None else key
 
         if column.type == "text" or column.type == "time":
             return {key: {'$regex': '.*' + search_key + '.*', '$options': 'i'}}
@@ -92,7 +117,8 @@ class MnTableMixin:
             try:
                 _date = datetime.strptime(search_key, BConfig().date_format)
                 return {key: {'$gte': _date, '$lt': _date + timedelta(days=1)}}
-            except ValueError:
+            except ValueError as ex:
+                print('tett', ex)
                 pass
 
         return None
