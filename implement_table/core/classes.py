@@ -367,6 +367,8 @@ class BViewSet(viewsets.ModelViewSet):
         return super(BViewSet, self).update(request, *args, **kwargs)
 
     def partial_update(self, request, *args, **kwargs):
+
+        print('eyyyyyyyyyyyyyyyyyyyyyyyyyy')
         return super(BViewSet, self).partial_update(request, *args, **kwargs)
 
     def destroy(self, request, *args, **kwargs):

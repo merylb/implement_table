@@ -1,6 +1,6 @@
 from mongoengine.document import EmbeddedDocument
 from mongoengine.fields import StringField, DynamicField, BooleanField, IntField, EmbeddedDocumentListField, \
-    EmbeddedDocumentField
+    EmbeddedDocumentField, ListField
 from mongoengine import queryset_manager
 
 from implement_table.core.classes import BDocument
@@ -49,9 +49,10 @@ class AllowPropertyNamespace(EmbeddedDocument):
     name = StringField()
     allow = BooleanField()
 
+
 class ValuePropertyNamespace(EmbeddedDocument):
     name = StringField()
-    value = BooleanField()
+    value = IntField()
 
 
 class TableClasses(EmbeddedDocument):
@@ -67,15 +68,15 @@ class TableColumns(EmbeddedDocument):
     description = StringField(default=None)
     unit = StringField(default=None)
     order_by = StringField(required=True)
-    is_orderable = BooleanField()
-    is_searchable = BooleanField()
-    is_editable = BooleanField()
-    is_required = BooleanField()
+    is_orderable = BooleanField(default=False)
+    is_searchable = BooleanField(default=False)
+    is_editable = BooleanField(default=False)
+    is_required = BooleanField(default=False)
     is_global_searchable = BooleanField(default=False)
     is_ref = BooleanField(default=False)
     module = StringField(default=None)
     model = StringField(default=None)
-    rounded = BooleanField()
+    rounded = BooleanField(default=False)
     is_callable = BooleanField(default=False)
 
     show_in = EmbeddedDocumentListField(AllowPropertyNamespace)
@@ -88,9 +89,9 @@ class TableColumns(EmbeddedDocument):
 
 
 class PaginationNamespace(EmbeddedDocument):
-    css_class = StringField()
-    key = StringField()
-    opposite = BooleanField()
+    name = StringField()
+    page_size = IntField()
+    page_options = ListField(IntField(), unique=True)
 
 
 class Table(EmbeddedDocument):
