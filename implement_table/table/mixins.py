@@ -1,5 +1,7 @@
 from datetime import datetime, timedelta
 
+from pydash.collections import find
+
 from implement_table.core.classes import BConfig
 from implement_table.table.models import TableConfig, TableColumns
 
@@ -10,13 +12,18 @@ class MnTableMixin:
         query = {
             "$and": []
         }
-        print('testtt----------', data)
 
+        search_filter=  data .pop('filter', {})
+        print('testtt----------hhhhhhhhhhhhhhhhhhhhhhhh', data)
+        config_value = TableConfig.get_by_key(configKey, None).value
 
-        if "multi_search" in data and len(data["multi_search"])>0:
+        pagination = find(config_value.pagination, lambda item: item.name == data['namespace']) or find(
+            config_value.pagination, lambda
+                item: item.name == 'default')
+
+        if "multi_search" in search_filter and len(search_filter["multi_search"]) > 0:
             search_keys = []
             columns = self._get_columns(configKey)
-
 
             for col in data["multi_search"]:
                 column = list(filter(lambda x: x.order_by == col['column'], columns))
@@ -27,7 +34,7 @@ class MnTableMixin:
                     elif column.is_ref and self._generate_reference_query(column, col['value']) is not None:
                         search_keys.append(self._generate_reference_query(column, col['value']))
                 else:
-                    search_keys.append({ col['column']: col['value']})
+                    search_keys.append({col['column']: col['value']})
 
             if search_keys:
                 query["$and"].append({'$and': search_keys})
@@ -35,21 +42,21 @@ class MnTableMixin:
         # query["$and"] += self._handle_access(kwargs)
 
         print('tetettete------------', query)
-        # if "search_all" in data and data["search_all"] != "":
-        #     search_keys = []
-        #     columns = list(filter(lambda x: x.is_global_searchable, self._get_columns()))
-        #     search_values = data["search_all"].split(' ')
-        #
-        #     for column in columns:
-        #         for k in search_values:
-        #             if not column.is_ref and self._generate_query(column, k) is not None:
-        #                 search_keys.append(self._generate_query(column, k))
-        #             elif column.is_ref and self._generate_reference_query(column, k) is not None:
-        #                 search_keys.append(self._generate_reference_query(column, k))
-        #
-        #     if search_keys:
-        #         query["$and"].append({'$or': search_keys})
-        #
+        if "search_all" in search_filter and search_filter["search_all"] != "":
+            search_keys = []
+            columns = list(filter(lambda x: x.is_global_searchable, self._get_columns(configKey)))
+            search_values = search_filter["search_all"].split(' ')
+
+            for column in columns:
+                for k in search_values:
+                    if not column.is_ref and self._generate_query(column, k) is not None:
+                        search_keys.append(self._generate_query(column, k))
+                    elif column.is_ref and self._generate_reference_query(column, k) is not None:
+                        search_keys.append(self._generate_reference_query(column, k))
+
+            if search_keys:
+                query["$and"].append({'$or': search_keys})
+
         # if "search" in data:
         #     search_keys = []
         #     columns = self._get_columns()
@@ -72,16 +79,14 @@ class MnTableMixin:
         # query["$and"] += self._handle_access(kwargs)
 
         page = self._model.objects(__raw__=query) if len(query['$and']) > 0 else self._model.objects
+        offset = (data["page"]) * pagination['page_size']
 
-        # offset = (data["page"] - 1) * data["limit"]
-        # dictionary["length"] = page.count()
-        #
-        # if dictionary["length"] < offset:
-        #     offset = 0
-        #
-        # dictionary["list"] = self._model_serializer(page.skip(offset).limit(data["limit"]).order_by(data["order"]),
-        #                                             many=True).data
-        dictionary = self._model_serializer(page, many=True).data
+        dictionary["length"] = page.count()
+
+
+        if dictionary["length"] < offset:
+            offset = 0
+        dictionary["list"] = self._model_serializer(page.skip(offset).limit(pagination['page_size']), many=True).data
 
         return dictionary
 
