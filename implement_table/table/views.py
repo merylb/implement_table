@@ -13,13 +13,15 @@ class TableConfigViewSet(BViewSet, MnTableMixin):
 
     _model_serializer = None
     _model = None
+    configKey = None
 
     def create(self, request, *args, **kwargs):
         model = request.data.pop('model', "")
         serializer = request.data.pop('serializer', "")
-        configKey = request.data.pop('configKey', "")
+        confi_key = request.data.pop('configKey', "")
         pkg = request.data.pop('packaging', "")
-        _query = request.data.pop('query', [])
+        _query = request.data.pop('query', {})
+        _order = request.data.pop('sorting', {})
 
         serializer_pkg = __import__("{}{}".format(pkg, '.serializer'), fromlist=serializer + 'Serializer')
         model_pkg = __import__("{}{}".format(pkg, '.models'), fromlist=model)
@@ -28,4 +30,4 @@ class TableConfigViewSet(BViewSet, MnTableMixin):
         self._model = model_class
         self._model_serializer = serializer_class
 
-        return Response(self.request_list(_query, configKey))
+        return Response(self.request_list(_query, _order, confi_key))

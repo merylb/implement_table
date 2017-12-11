@@ -1,31 +1,57 @@
 from datetime import datetime, timedelta
 
+from pydash import py_
 from pydash.collections import find
 
 from implement_table.core.classes import BConfig
 from implement_table.table.models import TableConfig, TableColumns
+import re
 
 
 class MnTableMixin:
-    def request_list(self, data, configKey):
+    def split_properties_fields(self, search_keys):
+        model_fields = self._model._fields.keys()
+
+        property_fields = py_(search_keys).filter_(
+            lambda item: any(k not in model_fields for k in item.keys())
+        ).value()
+        search_keys = py_(search_keys).reject(
+            lambda item: any(k not in model_fields for k in item.keys())
+        ).value()
+        p_fields = {k: d[k] for d in property_fields for k in d.keys()}
+        return search_keys, p_fields
+
+    @staticmethod
+    def filter_by_properties(p_fields, page):
+        p_keys = sorted(p_fields.keys())
+        for p in p_keys:
+            if '$regex' in p_fields[p].keys():
+                res = py_(page).filter_(
+                    lambda item: re.compile(p_fields[p]['$regex'], re.IGNORECASE).search(getattr(item, p))).value()
+            elif '$eq' in p_fields[p].keys():
+                res = py_(page).filter_(
+                    lambda item: p_fields[p]['$eq'] == getattr(item, p)).value()
+            page = res if len(res) > 0 or p == p_keys[-1] else page
+        return page
+
+    def request_list(self, data, order, configKey):
         dictionary = {}
         query = {
             "$and": []
         }
 
-        search_filter=  data .pop('filter', {})
-        print('testtt----------hhhhhhhhhhhhhhhhhhhhhhhh', data)
+        data_order = order.pop('sort_by', 'id')
+        order_direction = order.pop('direction', '-').replace('asc', '+').replace('desc', '-');
+        search_filter = data.pop('filter', {})
         config_value = TableConfig.get_by_key(configKey, None).value
-
         pagination = find(config_value.pagination, lambda item: item.name == data['namespace']) or find(
             config_value.pagination, lambda
                 item: item.name == 'default')
-
+        search_keys = []
         if "multi_search" in search_filter and len(search_filter["multi_search"]) > 0:
-            search_keys = []
-            columns = self._get_columns(configKey)
 
-            for col in data["multi_search"]:
+            columns = self._get_columns(configKey)
+            for col in search_filter["multi_search"]:
                 column = list(filter(lambda x: x.order_by == col['column'], columns))
                 if len(column) > 0:
                     column = column[0]
@@ -35,18 +61,12 @@ class MnTableMixin:
                         search_keys.append(self._generate_reference_query(column, col['value']))
                 else:
                     search_keys.append({col['column']: col['value']})
+            print('tttttttttttttttttttttt', search_keys)
 
-            if search_keys:
-                query["$and"].append({'$and': search_keys})
-
-        # query["$and"] += self._handle_access(kwargs)
-
-        print('tetettete------------', query)
         if "search_all" in search_filter and search_filter["search_all"] != "":
             search_keys = []
             columns = list(filter(lambda x: x.is_global_searchable, self._get_columns(configKey)))
             search_values = search_filter["search_all"].split(' ')
-
             for column in columns:
                 for k in search_values:
                     if not column.is_ref and self._generate_query(column, k) is not None:
@@ -54,53 +74,32 @@ class MnTableMixin:
                     elif column.is_ref and self._generate_reference_query(column, k) is not None:
                         search_keys.append(self._generate_reference_query(column, k))
 
-            if search_keys:
-                query["$and"].append({'$or': search_keys})
+        search_keys, p_fields = self.split_properties_fields(search_keys)
 
-        # if "search" in data:
-        #     search_keys = []
-        #     columns = self._get_columns()
-        #
-        #     for key in data["search"].keys():
-        #         if data["search"][key] != "" and data["search"][key] is not None:
-        #             column = list(filter(lambda x: x.order_by == key, columns))
-        #             if len(column) > 0:
-        #                 column = column[0]
-        #                 if not column.is_ref and self._generate_query(column, data["search"][key]) is not None:
-        #                     search_keys.append(self._generate_query(column, data["search"][key]))
-        #                 elif column.is_ref and self._generate_reference_query(column, data["search"][key]) is not None:
-        #                     search_keys.append(self._generate_reference_query(column, data["search"][key]))
-        #             else:
-        #                 search_keys.append({key: data["search"][key]})
-        #
-        #     if search_keys:
-        #         query["$and"].append({'$and': search_keys})
-
+        if search_keys:
+            query["$and"].append({'$or': search_keys})
         # query["$and"] += self._handle_access(kwargs)
-
         page = self._model.objects(__raw__=query) if len(query['$and']) > 0 else self._model.objects
         offset = (data["page"]) * pagination['page_size']
-
         dictionary["length"] = page.count()
-
-
         if dictionary["length"] < offset:
             offset = 0
-        dictionary["list"] = self._model_serializer(page.skip(offset).limit(pagination['page_size']), many=True).data
-
+        page = page.skip(offset).limit(pagination['page_size']).order_by('{}{}'.format(order_direction, data_order))
+        if p_fields:
+            page = self.filter_by_properties(p_fields, page)
+        dictionary["list"] = self._model_serializer(page, many=True).data
         return dictionary
 
     # def get_config(self, data, **kwargs):
-    #     from App.shared.config.serializer import TableSerializer
-    #     mine = data.pop('mine', False)
-    #
-    #     if mine:
-    #         owner = self._get_owner(kwargs['subscriber'].user)
-    #     else:
-    #         owner = None
-    #
-    #     return TableSerializer(TableConfig.get_by_key(self.config_key, owner).value).data
-    #
+        # mine = data.pop('mine', False)
+        # if mine:
+        #     owner = self._get_owner(kwargs['subscriber'].user)
+        # else:
+        #     owner = None
+        # TableConfig.get_by_key(configKey, None).value
+        # return TableConfig.get_by_key(self.config_key, owner).value
+
+
     @staticmethod
     def _get_columns(config_key):
         return TableConfig.get_by_key(config_key, None).value.columns
@@ -123,9 +122,7 @@ class MnTableMixin:
                 _date = datetime.strptime(search_key, BConfig().date_format)
                 return {key: {'$gte': _date, '$lt': _date + timedelta(days=1)}}
             except ValueError as ex:
-                print('tett', ex)
                 pass
-
         return None
 
     def _generate_reference_query(self, column, value):

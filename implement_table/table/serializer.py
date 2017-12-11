@@ -64,7 +64,7 @@ class TableColumnsSerializer(EmbeddedDocumentSerializer):
 class PaginationNamespaceSerializer(EmbeddedDocumentSerializer):
     name = CharField()
     page_size = IntegerField()
-    page_options = ListField(child=IntegerField(), required=False)
+    page_options = ListField(child=IntegerField(), required=False, default=[5, 10, 15, 20])
 
     class Meta:
         model = PaginationNamespace

@@ -289,8 +289,6 @@ class BViewSet(viewsets.ModelViewSet):
         query = self.hidden_model_filter(query, many=True)
         return self.get_model().objects(__raw__=query).order_by(*self.order_by)
 
-
-
     def hidden_model_filter(self, query=None, many=False):
         user = self.request.user
 
@@ -337,9 +335,6 @@ class BViewSet(viewsets.ModelViewSet):
         # data.append({"owner": {"$exists": False}})
 
         return {"$or": data} if len(data) > 0 else {}
-
-
-
 
     def list(self, request, *args, **kwargs):
         serializer = self.get_serializer(self.get_objects(), many=True)
