@@ -62,6 +62,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(PARENT_DIR, 'implement_front' )]
+        # 'DIRS': [os.path.join('C:\\Users\Hp\Documents\\New Platform projects\\ft-table-front')]
+
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -127,4 +129,5 @@ USE_TZ = True
 
 STATIC_URL = '/dist/'
 STATIC_ROOT = os.path.join(PARENT_DIR, 'implement_front', 'ft-table', 'dist')
+# STATIC_ROOT = os.path.join('C:\\Users\Hp\Documents\\New Platform projects\\ft-table-front', 'dist')
 LANGUAGE_CODE = 'fr'

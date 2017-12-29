@@ -1,8 +1,19 @@
-django>=1.11
 pymongo>=3.2
-mongoengine>=0.13
-djangorestframework>=3.6.0
-django-rest-framework-mongoengine>=3.3.0
-num2words
+django>=2.0
+mongoengine>=0.15.0
 pydash
-ujson>=1.35
+djangorestframework>=3.7.3
+django-extra-fields
+djangorestframework-recursive
+drf-compound-fields
+drf_ujson
+djangorestframework-jwt
+django-rest-framework-mongoengine>=3.3.1
+camel_snake_kebab
+gevent
+num2words
+xlsxwriter
+ws4py
+-e git+http://m.labied@192.168.1.218:28080/r/ft_core.git#egg=ft_core
+
+
