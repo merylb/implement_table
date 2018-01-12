@@ -37,10 +37,10 @@ class TableColumnsSerializer(EmbeddedDocumentSerializer):
     type = CharField()
     description = CharField(default='', allow_null=True)
     unit = CharField(allow_null=True, allow_blank=True)
-    order_by = CharField()
-    is_orderable = BooleanField()
-    is_searchable = BooleanField()
-    is_editable = BooleanField()
+    order_by = CharField(required=False, allow_blank=True)
+    is_orderable = BooleanField(default=False)
+    is_searchable = BooleanField(default=False)
+    is_editable = BooleanField(default=False)
     is_global_searchable = BooleanField(default=False)
     is_required = BooleanField(default=False)
     is_ref = BooleanField(default=False)
@@ -51,9 +51,10 @@ class TableColumnsSerializer(EmbeddedDocumentSerializer):
     show_in = BEmbeddedListField(serializer=AllowPropertyNamespaceSerializer, required=False, allow_null=True)
     order_in = BEmbeddedListField(serializer=ValuePropertyNamespaceSerializer, required=False, allow_null=True)
 
-    is_icon = BooleanField(default=False)
-    icon_name = CharField(required=False, allow_blank=True, allow_null=True)
 
+    icon_name = CharField(required=False, allow_blank=True, allow_null=True)
+    is_extended = BooleanField(default=False)
+    colspan = IntegerField(default=1)
     style_classes = BEmbeddedListField(serializer=TableClassesSerializer, required=False, allow_null=True)
 
     class Meta:
@@ -88,4 +89,4 @@ class TableConfigSerializer(DocumentSerializer):
 
     class Meta:
         model = TableConfig
-        fields = ('key', 'value')
+        fields = ('id', 'key', 'value')

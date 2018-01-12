@@ -66,26 +66,29 @@ class TableColumns(EmbeddedDocument):
     name = StringField(required=True)
     type = StringField(default="text")
     description = StringField(default=None)
-    unit = StringField(default=None)
-    order_by = StringField(required=True)
+    unit = StringField(default='')
+    order_by = StringField(default='')
     is_orderable = BooleanField(default=False)
     is_searchable = BooleanField(default=False)
     is_editable = BooleanField(default=False)
     is_required = BooleanField(default=False)
     is_global_searchable = BooleanField(default=False)
-    is_ref = BooleanField(default=False)
-    module = StringField(default=None)
-    model = StringField(default=None)
     rounded = BooleanField(default=False)
     is_callable = BooleanField(default=False)
 
     show_in = EmbeddedDocumentListField(AllowPropertyNamespace)
-
     order_in = EmbeddedDocumentListField(ValuePropertyNamespace)
-    is_icon = BooleanField(default=False)
     icon_name = StringField()
-
+    is_extended = BooleanField(default=False)
+    colspan = IntField(default=1)
     style_classes = EmbeddedDocumentListField(TableClasses)
+
+    def __init__(self, *args, **kwargs):
+        if not kwargs.get('order_in'):
+            kwargs['order_in'] = [ValuePropertyNamespace(**{"name": "default", "value": 0})]
+        if not kwargs.get('show_in'):
+            kwargs['show_in'] = [AllowPropertyNamespace(**{"name": "default", "allow": True})]
+        super(EmbeddedDocument, self).__init__(*args, **kwargs)
 
 
 class PaginationNamespace(EmbeddedDocument):
@@ -99,6 +102,12 @@ class Table(EmbeddedDocument):
     pagination = EmbeddedDocumentListField(PaginationNamespace)
     classes = EmbeddedDocumentListField(TableClasses)
     filtered_by_owner = BooleanField(default=False)
+
+    def __init__(self, *args, **kwargs):
+        if not kwargs.get('pagination'):
+            kwargs['pagination'] = [
+                PaginationNamespace(**{'name': 'default', 'page_size': 5, 'page_options': [5, 10, 20, 30]})]
+        super(EmbeddedDocument, self).__init__(*args, **kwargs)
 
 
 class TableConfig(BaseConfig):

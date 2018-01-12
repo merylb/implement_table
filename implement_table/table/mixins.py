@@ -44,6 +44,8 @@ class MnTableMixin:
         order_direction = order.pop('direction', '-').replace('asc', '+').replace('desc', '-');
         search_filter = data.pop('filter', {})
         config_value = TableConfig.get_by_key(configKey, None).value
+
+        print('test---------------', config_value)
         pagination = find(config_value.pagination, lambda item: item.name == data['namespace']) or find(
             config_value.pagination, lambda
                 item: item.name == 'default')
