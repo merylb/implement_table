@@ -1,10 +1,10 @@
-from implement_table.core.fields import BEmbeddedListField
+from implement_table.core.fields import BEmbeddedListField, BDynamicField
 
-from rest_framework.fields import CharField, BooleanField, IntegerField, ListField
+from rest_framework.fields import CharField, BooleanField, IntegerField, ListField, ChoiceField
 from rest_framework_mongoengine.serializers import EmbeddedDocumentSerializer, DocumentSerializer
 
 from implement_table.table.models import Table, TableConfig, TableClasses, ValuePropertyNamespace, TableColumns, \
-    AllowPropertyNamespace, PaginationNamespace
+    AllowPropertyNamespace, PaginationNamespace, SharedGroup, ViewQuery, TableView
 
 
 class TableClassesSerializer(EmbeddedDocumentSerializer):
@@ -51,7 +51,6 @@ class TableColumnsSerializer(EmbeddedDocumentSerializer):
     show_in = BEmbeddedListField(serializer=AllowPropertyNamespaceSerializer, required=False, allow_null=True)
     order_in = BEmbeddedListField(serializer=ValuePropertyNamespaceSerializer, required=False, allow_null=True)
 
-
     icon_name = CharField(required=False, allow_blank=True, allow_null=True)
     is_extended = BooleanField(default=False)
     colspan = IntegerField(default=1)
@@ -72,15 +71,50 @@ class PaginationNamespaceSerializer(EmbeddedDocumentSerializer):
         fields = ('name', 'page_size', 'page_options')
 
 
+class SharedGroupSerializer(EmbeddedDocumentSerializer):
+    user = BDynamicField()
+    access = ListField(child=CharField())
+    is_owner = BooleanField(default=False)
+
+    class Meta:
+        model = SharedGroup
+        fields = '__all__'
+
+
+class ViewQuerySerializer(EmbeddedDocumentSerializer):
+    column = CharField()
+    operator = CharField()
+    value = BDynamicField()
+    logical_operator = CharField()
+
+    class Meta:
+        model = ViewQuery
+        fields = '__all__'
+
+
+class TableViewSerializer(EmbeddedDocumentSerializer):
+    shared_group = BEmbeddedListField(serializer=SharedGroupSerializer)
+    name = CharField(required=True)
+    model = CharField(required=True)
+    is_default = BooleanField(default=False)
+    access = ChoiceField(choices=['private', 'public', 'restrict'], required=False)
+    query = ListField(child=ViewQuerySerializer(many=False, read_only=False, allow_null=True, required=False))
+
+    class Meta:
+        model = TableView
+        fields = '__all__'
+
+
 class TableSerializer(EmbeddedDocumentSerializer):
     columns = BEmbeddedListField(serializer=TableColumnsSerializer, sorted_by=True)
     classes = BEmbeddedListField(serializer=TableClassesSerializer)
     filtered_by_owner = BooleanField(default=False)
+    view = TableViewSerializer(many=False, read_only=False, allow_null=True, required=True)
     pagination = BEmbeddedListField(serializer=PaginationNamespaceSerializer, required=False)
 
     class Meta:
         model = Table
-        fields = ('columns', 'classes', 'filtered_by_owner', 'pagination')
+        fields = ('columns', 'classes', 'filtered_by_owner', 'pagination', 'view')
 
 
 class TableConfigSerializer(DocumentSerializer):
@@ -89,4 +123,4 @@ class TableConfigSerializer(DocumentSerializer):
 
     class Meta:
         model = TableConfig
-        fields = ('id', 'key', 'value')
+        fields = ['id', 'value', 'key']

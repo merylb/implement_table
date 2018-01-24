@@ -1,0 +1,51 @@
+{
+  "columns": [
+    {
+      "label": "table.invoice_number",
+      "name": "number",
+      "type": "text",
+      "is_orderable": true,
+      "is_searchable": true,
+      "is_editable": false,
+      "is_global_searchable": true,
+      "is_required": true
+    },
+    {
+      "label": "table.invoice_date",
+      "name": "doc_date",
+      "type": "date",
+      "order_by": "doc_date",
+      "is_orderable": true,
+      "is_searchable": true,
+      "is_editable": false,
+      "is_global_searchable": true,
+      "is_required": true
+    },
+    {
+      "label": "table.invoice_beneficiary",
+      "name": "beneficiary_name",
+      "type": "text",
+      "is_orderable": true,
+      "is_searchable": true,
+      "is_editable": false,
+      "is_global_searchable": false,
+      "is_required": true
+    },
+    {
+      "label": "table.taxed_amount",
+      "name": "taxed_amount",
+      "type": "number",
+      "is_orderable": true,
+      "is_searchable": true,
+      "is_editable": false,
+      "is_global_searchable": false,
+      "is_required": false
+    }
+  ],
+  "view": {
+    "name": "Toutes les factures",
+    "model": "invoicing.Invoice",
+    "is_default": true,
+    "access": "public"
+  }
+}

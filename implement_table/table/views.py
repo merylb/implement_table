@@ -5,9 +5,10 @@ from implement_table.core.classes import BViewSet
 
 from implement_table.table.mixins import MnTableMixin
 from implement_table.table.models import TableConfig, Table, TableColumns, PaginationNamespace
-from implement_table.table.serializer import TableSerializer, TableConfigSerializer
+from implement_table.table.serializer import TableSerializer, TableConfigSerializer, TableColumnsSerializer
 
 from . import serializer
+from implement_table.invoicing.serializer import InvoiceSerializer
 
 
 class TableConfigViewSet(BViewSet, MnTableMixin):
@@ -35,7 +36,7 @@ class TableConfigViewSet(BViewSet, MnTableMixin):
         return Response(self.request_list(_query, _order, confi_key))
 
     def last_config(self, request):
-        print('etezryutyerutrudddddddddd', request.data)
+
         model = request.data.pop('model', "")
         confi_key = request.data.pop('configKey', "")
         pkg = request.data.pop('package', "")
@@ -48,10 +49,10 @@ class TableConfigViewSet(BViewSet, MnTableMixin):
         serializer_class = getattr(serializer_pkg, model + 'Serializer')
         self._model = model_class
         self._model_serializer = serializer_class
+
         return Response(self.request_list(_query, _order, model))
 
     def create(self, request, *args, **kwargs):
-        print('testèèèèèèèèèèèèèèèèèèèèèèèèè', request.data)
         if request.data.pop('serializer', ""):
             return self.first_config(request)
         else:
@@ -67,8 +68,7 @@ class TableConfig2ViewSet(BViewSet, MnTableMixin):
         columns = list()
         # **{'name': 'default', 'page_size': 5, 'page_options': [5, 10, 20, 30]}))
         for item in config['columns']:
-
-            column = TableColumns(**item  )
+            column = TableColumns(**item)
             columns.append(column)
 
         table_config = TableConfig.get_by_key(config_key)
@@ -86,6 +86,25 @@ class TableConfig2ViewSet(BViewSet, MnTableMixin):
         return Response(TableConfigSerializer(table_config).data)
 
 
+class TableFilterViewSet(BViewSet, MnTableMixin):
+    serializer_class = serializer.TableConfigSerializer
 
-x={'model': 'Invoice', 'package': 'implement_table.invoicing', 'query': {'page': 0, 'namespace': 'invoice_list', 'filter': {'multi_search': [{'column': {'name': 'number', 'label': 'table.invoice_number', 'type': 'text', 'is_orderable': True, 'is_editable': False, 'is_required': True}, 'value': '1255', 'operator': {'label': 'equal', 'value': 'eq', 'type': 'all'}}]}}}
-y= {'model': 'Invoice', 'package': 'implement_table.invoicing', 'query': {'page': 0, 'namespace': 'invoice_list', 'filter': {'multi_search': [{'column': {'name': 'number', 'label': 'table.invoice_number', 'type': 'text', 'is_orderable': True, 'is_editable': False, 'is_required': True}, 'value': '1255', 'operator': {'label': 'equal', 'value': 'eq', 'type': 'all'}}]}}}
+    def create(self, request, *args, **kwargs):
+        print('teteette----------------', request.data)
+        return Response('testtttttttttttttttttttttttt')
+
+
+class TableViewForColumns(BViewSet, MnTableMixin):
+    serializer_class = InvoiceSerializer
+    config_key = "Invoice"
+    model = "invoicing.Invoice"
+
+    def create(self, request, *args, **kwargs):
+        method_name = request.data.get('event_method_name')
+        quey = request.data.get('query', {})
+        exec_func = getattr(self, method_name)
+        return Response(exec_func(**quey))
+
+
+class TableViewSet(BViewSet, MnTableMixin):
+    serializer_class = TableConfigSerializer

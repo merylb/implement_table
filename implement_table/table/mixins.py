@@ -4,8 +4,12 @@ from pydash import py_
 from pydash.collections import find
 
 from implement_table.core.classes import BConfig
+from implement_table.invoicing.models import Invoice
+from implement_table.system.management.commands.table_config import Command
 from implement_table.table.models import TableConfig, TableColumns
 import re
+
+from implement_table.table.serializer import TableSerializer, TableConfigSerializer
 
 
 class MnTableMixin:
@@ -45,12 +49,12 @@ class MnTableMixin:
         search_filter = data.pop('filter', {})
         config_value = TableConfig.get_by_key(configKey, None).value
 
-        print('test---------------', config_value)
         pagination = find(config_value.pagination, lambda item: item.name == data['namespace']) or find(
             config_value.pagination, lambda
                 item: item.name == 'default')
         search_keys = []
         if "multi_search" in search_filter and len(search_filter["multi_search"]) > 0:
+            print('test---------------', search_filter["multi_search"])
 
             columns = self._get_columns(configKey)
             for col in search_filter["multi_search"]:
@@ -62,8 +66,7 @@ class MnTableMixin:
                     elif column.is_ref and self._generate_reference_query(column, col['value']) is not None:
                         search_keys.append(self._generate_reference_query(column, col['value']))
                 else:
-                    search_keys.append({col['column']: col['value']})
-            print('tttttttttttttttttttttt', search_keys)
+                    search_keys.append({col['column']['name']: col['value']})
 
         if "search_all" in search_filter and search_filter["search_all"] != "":
             search_keys = []
@@ -93,14 +96,13 @@ class MnTableMixin:
         return dictionary
 
     # def get_config(self, data, **kwargs):
-        # mine = data.pop('mine', False)
-        # if mine:
-        #     owner = self._get_owner(kwargs['subscriber'].user)
-        # else:
-        #     owner = None
-        # TableConfig.get_by_key(configKey, None).value
-        # return TableConfig.get_by_key(self.config_key, owner).value
-
+    # mine = data.pop('mine', False)
+    # if mine:
+    #     owner = self._get_owner(kwargs['subscriber'].user)
+    # else:
+    #     owner = None
+    # TableConfig.get_by_key(configKey, None).value
+    # return TableConfig.get_by_key(self.config_key, owner).value
 
     @staticmethod
     def _get_columns(config_key):
@@ -227,3 +229,36 @@ class MnTableMixin:
         #     items = reduce_(items, iteratee=handle_items_reduce, accumulator=[])
         #
         #     return items
+
+    # *****************  this methods will be in table mixin ***********************
+
+    def get_default_view(self, **query):
+        obj = TableConfig.objects(is_deleted=False, value__view__model=self.get_model_pkg(), value__view__is_default=True)
+        return TableSerializer(obj[0].value).data if obj else []
+
+    def save_config(self, config_data):
+        config = TableConfig(**config_data)
+        config.save()
+        return TableConfigSerializer(config).data
+
+    def create_update_view(self, **query):
+        config_data = query.get('config', None)
+        pk = config_data.get('id', None)
+        if config_data:
+            config_data['key'] = "{}.{}".format(self.config_key, config_data['value']['view'].get('name'))
+            config_data['value']['view']['model'] = self.get_model_pkg()
+            exist_conf = TableConfig.objects(is_deleted=False, key=config_data['key'],
+                                             id__ne=pk) if pk else TableConfig.objects(is_deleted=False,
+                                                                                       key=config_data['key'])
+            if not exist_conf:
+                return self.save_config(config_data)
+        else:
+            return None
+
+    def get_model_pkg(self):
+        return "{}.{}".format('.'.join(self.get_model().__module__.split('.')[1:-1]), self.get_model().__name__)
+
+    def get_table_views(self, **query):
+        model_name = query.get('model')
+        return TableConfigSerializer(TableConfig.objects(is_deleted=False, value__view__model=model_name),
+                                     many=True).data

@@ -4,7 +4,7 @@ import ujson
 from django.conf import settings
 from mongoengine.connection import get_db
 from pydash.strings import kebab_case
-from implement_table. table.models import Table, TableColumns, TableClasses, TableConfig
+from implement_table.table.models import Table, TableColumns, TableClasses, TableConfig, TableView
 from implement_table.shared.config.models import BillingConfig
 
 db = get_db()
@@ -29,29 +29,23 @@ def init_general_config(path=json_path):
 def insert_tables_config(name, path=json_path):
     with open(os.path.join(path, '{}-columns.json'.format(kebab_case(name))), encoding='utf-8') as data_file:
         data = ujson.load(data_file)
-
     table = Table(columns=list(), classes=list())
-
     columns = data.get('columns', [])
     classes = data.get('classes', [])
-
+    view = data.get('view', [])
     for item in columns:
         config = TableColumns(**item)
         table.columns.append(config)
-
     for item in classes:
         config = TableClasses(**item)
         table.classes.append(config)
+    table.filtered_by_owner = data.get('filtered_by_owner', False)
 
-        table.filtered_by_owner = data.get('filtered_by_owner', False)
-
-    table_config = TableConfig.get_by_key(name)
-
-
+    table_config = TableConfig.get_by_key("{}{}".format(name, '.default'))
     if table_config is None:
-        table_config = TableConfig(key="Visit", value=table)
+        table.view = TableView(**view)
+        table_config = TableConfig(key="{}{}".format(name, '.default'), value=table)
     else:
+        table.pagination = table_config.value.pagination
         table_config.value = table
-
-
     table_config.save()

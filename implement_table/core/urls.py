@@ -21,7 +21,8 @@ from django.views.generic.base import TemplateView, RedirectView
 from implement_table.invoicing.views import InvoiceViewSet, FeesNoteViewSet
 from implement_table.payment.views import PaymentViewSet
 from implement_table.pec.views import CareRequestViewSet
-from implement_table.table.views import TableConfigViewSet, TableConfig2ViewSet
+from implement_table.table.views import TableConfigViewSet, TableConfig2ViewSet, TableFilterViewSet, \
+    TableViewForColumns, TableViewSet
 
 urlpatterns = [
                   url(r'^implement-table/.*$', TemplateView.as_view(template_name='index.html'), name='index'),
@@ -33,4 +34,7 @@ urlpatterns = [
                   url(r'^api/pec', include(CareRequestViewSet.urls())),
                   url(r'^api/table-config', include(TableConfigViewSet.urls())),
                   url(r'^api/table-config2', include(TableConfig2ViewSet.urls())),
+                  url(r'^api/table-filter', include(TableFilterViewSet.urls())),
+                  url(r'^api/table-view-cols', include(TableViewForColumns.urls())),
+                  url(r'^api/table-view', include(TableViewSet.urls())),
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
